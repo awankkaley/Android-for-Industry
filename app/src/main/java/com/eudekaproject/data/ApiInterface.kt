@@ -1,4 +1,4 @@
-package com.eudekaproject.remote
+package com.eudekaproject.data
 
 import com.eudekaproject.model.DomainResponse
 import retrofit2.Call

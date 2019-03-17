@@ -1,4 +1,4 @@
-package com.eudekaproject.remote
+package com.eudekaproject.data
 
 import com.eudekaproject.model.DomainResponse
 
@@ -7,6 +7,6 @@ interface DomainDataSource {
 }
 
 interface GetDomainCallback {
-    fun onDomainLoaded(team: DomainResponse?)
+    fun onDomainLoaded(domain: DomainResponse?)
     fun onDataNotAvailable(errorMessage: String)
 }

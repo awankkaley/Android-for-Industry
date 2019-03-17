@@ -1,4 +1,4 @@
-package com.eudekaproject.remote
+package com.eudekaproject.data
 
 
 import com.eudekaproject.BuildConfig.BASE_URL
