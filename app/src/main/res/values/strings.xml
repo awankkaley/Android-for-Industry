@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">EudekaProject</string>
+
+    <string name="input_domain_label">Input Domain Name</string>
+    <string name="cek_domain_label">Cek Domain</string>
+    <string name="cari_domain_label">Cari</string>
+    <string name="domain_name_label">Domain Name</string>
+    <string name="domain_status_label">Domain Status</string>
 </resources>
