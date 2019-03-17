@@ -6,4 +6,5 @@
     <string name="cari_domain_label">Cari</string>
     <string name="domain_name_label">Domain Name</string>
     <string name="domain_status_label">Domain Status</string>
+    <string name="domain_desc_label">Domain Description</string>
 </resources>
