@@ -12,11 +12,11 @@ class MainViewModel(private val domainRepository: DomainRepository) {
         this.domainNavigator = domainNavigator
     }
 
-    fun getListTeam() {
-        domainRepository.getDomainList(object : GetDomainCallback {
+    fun getListTeam(key: String) {
+        domainRepository.getDomainList(key, object : GetDomainCallback {
             override fun onDomainLoaded(domain: DomainResponse?) {
                 if (domain != null) {
-                    domainNavigator.LoadListDomain(domain.domains)
+                    domainNavigator.loadListDomain(domain.domains)
                 }
             }
 

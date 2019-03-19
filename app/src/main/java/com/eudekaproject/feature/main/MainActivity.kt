@@ -15,17 +15,22 @@ class MainActivity : AppCompatActivity(), DomainNavigator {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        mainViewModel = MainViewModel(Injection.provideDomainRepositorycontext(this))
-        mainViewModel.setNavigator(this)
-        mainViewModel.getListTeam()
+        initViewModel()
+
+        mainViewModel.getListTeam("facebook")
 
     }
 
-    override fun LoadListDomain(listDomain: List<DomainsItem?>) {
+    override fun loadListDomain(listDomain: List<DomainsItem?>) {
         Log.d("GET", "Data :" + listDomain.size)
     }
 
     override fun errorLoadListDomain(message: String) {
         Log.d("GET", "error :$message")
+    }
+
+    fun initViewModel() {
+        mainViewModel = MainViewModel(Injection.provideDomainRepositorycontext(this))
+        mainViewModel.setNavigator(this)
     }
 }

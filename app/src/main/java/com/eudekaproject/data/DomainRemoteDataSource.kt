@@ -7,9 +7,9 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class DomainRemoteDataSource : DomainDataSource {
-    override fun getDomainList(callback: GetDomainCallback) {
+    override fun getDomainList(key: String, callback: GetDomainCallback) {
         val serviceCallDomain = ApiClient.create()
-        serviceCallDomain.getAllDomain("harmoni").enqueue(object : Callback<DomainResponse> {
+        serviceCallDomain.getAllDomain(key).enqueue(object : Callback<DomainResponse> {
             override fun onFailure(call: Call<DomainResponse>, t: Throwable) {
                 callback.onDataNotAvailable(t.message.toString())
             }

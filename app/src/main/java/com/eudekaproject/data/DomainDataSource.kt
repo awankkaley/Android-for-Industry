@@ -3,7 +3,7 @@ package com.eudekaproject.data
 import com.eudekaproject.model.DomainResponse
 
 interface DomainDataSource {
-    fun getDomainList(callback: GetDomainCallback)
+    fun getDomainList(key:String,callback: GetDomainCallback)
 }
 
 interface GetDomainCallback {
