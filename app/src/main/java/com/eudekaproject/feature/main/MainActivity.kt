@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity(), DomainNavigator {
         setContentView(R.layout.activity_main)
         initViewModel()
 
-        mainViewModel.getListTeam("facebook")
+        mainViewModel.getListTeam("tokopedia")
 
     }
 
