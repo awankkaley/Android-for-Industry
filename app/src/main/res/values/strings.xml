@@ -7,4 +7,8 @@
     <string name="domain_name_label">Domain Name</string>
     <string name="domain_status_label">Domain Status</string>
     <string name="domain_desc_label">Domain Description</string>
+
+    <string name="not_avail">Not Available</string>
+    <string name="result">Result </string>
+    <string name="empty_field">Please Fill Your Input !</string>
 </resources>
