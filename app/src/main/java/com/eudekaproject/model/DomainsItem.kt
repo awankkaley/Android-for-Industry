@@ -1,9 +1,7 @@
 package com.eudekaproject.model
 
-import android.os.Parcel
-import android.os.Parcelable
+
 import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
 
 
 data class DomainsItem(
@@ -16,6 +14,7 @@ data class DomainsItem(
 
 	@field:SerializedName("NS")
 	val nS: List<String?>? = null,
+
 
 	@field:SerializedName("expiry_date")
 	val expiryDate: Any? = null,
@@ -61,55 +60,4 @@ data class DomainsItem(
 
 	@field:SerializedName("apps")
 	val apps: Any? = null
-):Parcelable {
-
-	constructor(parcel: Parcel) : this(
-		parcel.createStringArrayList(),
-		parcel.readString(),
-		parcel.createStringArrayList(),
-		TODO("expiryDate"),
-		parcel.createTypedArrayList(MXItem.CREATOR),
-		parcel.readString(),
-		parcel.readString(),
-		parcel.readValue(Boolean::class.java.classLoader) as? Boolean,
-		TODO("tXT"),
-		parcel.readValue(Boolean::class.java.classLoader) as? Boolean,
-		parcel.readString(),
-		TODO("cNAME"),
-		TODO("createDate"),
-		TODO("robotsTxt"),
-		parcel.readString(),
-		parcel.readValue(Boolean::class.java.classLoader) as? Boolean,
-		TODO("parserError"),
-		TODO("apps")
-	) {
-	}
-
-	override fun writeToParcel(parcel: Parcel, flags: Int) {
-		parcel.writeStringList(A)
-		parcel.writeString(country)
-		parcel.writeStringList(nS)
-		parcel.writeTypedList(mX)
-		parcel.writeString(suffix)
-		parcel.writeString(updateDate)
-		parcel.writeValue(isDead)
-		parcel.writeValue(resolvable)
-		parcel.writeString(domain)
-		parcel.writeString(url)
-		parcel.writeValue(parser)
-	}
-
-	override fun describeContents(): Int {
-		return 0
-	}
-
-	companion object CREATOR : Parcelable.Creator<DomainsItem> {
-		override fun createFromParcel(parcel: Parcel): DomainsItem {
-			return DomainsItem(parcel)
-		}
-
-		override fun newArray(size: Int): Array<DomainsItem?> {
-			return arrayOfNulls(size)
-		}
-	}
-}
+)
