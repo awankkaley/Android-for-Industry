@@ -3,7 +3,6 @@ package com.eudekaproject.feature.list
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import com.eudekaproject.DomainNavigator
 import com.eudekaproject.Injection
 import com.eudekaproject.R
@@ -30,6 +29,7 @@ class ListDomainActivity : AppCompatActivity(), DomainNavigator {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_domain)
         val key = intent.getStringExtra("key")
+        setSupportActionBar(toolbar_list)
         supportActionBar?.title = resources.getString(R.string.result) + " " + key
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 

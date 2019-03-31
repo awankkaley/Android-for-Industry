@@ -12,6 +12,7 @@ class DomainDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_domain_detail)
+        setSupportActionBar(toolbar_detail)
         supportActionBar?.title = resources.getString(R.string.domain_detail)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         tv_a_detail.formatList(intent.getStringExtra("a"))

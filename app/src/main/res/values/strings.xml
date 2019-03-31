@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">EudekaProject</string>
 
-    <string name="input_domain_label">Input Domain Name</string>
+    <string name="input_domain_label">Search Your Domain</string>
     <string name="cek_domain_label">Cek Domain</string>
     <string name="cari_domain_label">Cari</string>
     <string name="domain_name_label">Domain Name</string>
@@ -29,4 +29,5 @@
     <string name="cname">CName :</string>
     <string name="request_time_out">Something Wrong :(</string>
     <string name="domain_detail">Domain Detail</string>
+    <string name="fill_your_domain_here">Fill Your Domain Here !</string>
 </resources>

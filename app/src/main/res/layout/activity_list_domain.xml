@@ -6,6 +6,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".feature.list.ListDomainActivity">
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"/>
     <ProgressBar
             android:id="@+id/domain_progress_id"
             android:layout_width="wrap_content"
