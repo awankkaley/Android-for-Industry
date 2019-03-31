@@ -11,4 +11,22 @@
     <string name="not_avail">Not Available</string>
     <string name="result">Result </string>
     <string name="empty_field">Please Fill Your Input !</string>
+    <string name="domain">Domain :</string>
+    <string name="expiry_date">Expiry Date :</string>
+    <string name="active">Active :</string>
+    <string name="a">A :</string>
+    <string name="txt">TXT :</string>
+    <string name="country">Country :</string>
+    <string name="ns">NS :</string>
+    <string name="resolvable">Resolvable :</string>
+    <string name="mx">MX :</string>
+    <string name="suffix">Suffix :</string>
+    <string name="url">Url :</string>
+    <string name="robotstxt">RobotsTxt :</string>
+    <string name="apps">Apps :</string>
+    <string name="parser">Parser :</string>
+    <string name="parsererror">ParserError :</string>
+    <string name="cname">CName :</string>
+    <string name="request_time_out">Something Wrong :(</string>
+    <string name="domain_detail">Domain Detail</string>
 </resources>

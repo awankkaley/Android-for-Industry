@@ -1,8 +1,6 @@
 package com.eudekaproject.model
 
-
 import com.google.gson.annotations.SerializedName
-
 
 data class DomainsItem(
 
