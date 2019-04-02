@@ -9,6 +9,8 @@ import com.eudekaproject.Injection
 import com.eudekaproject.DomainViewModel
 import com.eudekaproject.feature.list.ListDomainActivity
 import com.eudekaproject.model.DomainsItem
+import com.eudekaproject.utils.gone
+import com.eudekaproject.utils.visible
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.sdk27.coroutines.onClick
@@ -16,7 +18,6 @@ import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity(), DomainNavigator {
     private lateinit var domainViewModel: DomainViewModel
-    private var data: MutableList<DomainsItem?> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,12 +25,17 @@ class MainActivity : AppCompatActivity(), DomainNavigator {
         initViewModel()
 
         btn_cari_domain.onClick {
-            cariData()
+            cariCekData("cari")
+        }
+        btn_cek_domain.onClick {
+            cariCekData("cek")
         }
     }
 
     override fun loadListDomain(listDomain: List<DomainsItem?>) {
-        data.addAll(listDomain)
+        if (listDomain.isEmpty()) {
+            tv_main_available.setText(R.string.domain_avail)
+        } else tv_main_available.setText(R.string.domain_unavai)
 
     }
 
@@ -38,11 +44,11 @@ class MainActivity : AppCompatActivity(), DomainNavigator {
     }
 
     override fun showProgress() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        progress_bar_main.visible()
     }
 
     override fun hideProgress() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        progress_bar_main.gone()
     }
 
     fun initViewModel() {
@@ -50,15 +56,19 @@ class MainActivity : AppCompatActivity(), DomainNavigator {
         domainViewModel.setNavigator(this)
     }
 
-    fun cariData() {
+    fun cariCekData(key: String) {
         var isEmptyField = false
         if (TextUtils.isEmpty(eTxt_input_domain.text)) {
             isEmptyField = true
             eTxt_input_domain.error = resources.getString(R.string.empty_field)
         }
-        if (!isEmptyField) {
-            val key = eTxt_input_domain.text.toString()
-            startActivity(intentFor<ListDomainActivity>(Pair("key", key)))
+        if (!isEmptyField && key == "cari") {
+            val keyword = eTxt_input_domain.text.toString()
+            startActivity(intentFor<ListDomainActivity>(Pair("key", keyword)))
+        }
+        if (!isEmptyField && key == "cek") {
+            val keyword = eTxt_input_domain.text.toString()
+            domainViewModel.getListTeam(keyword)
         }
     }
 

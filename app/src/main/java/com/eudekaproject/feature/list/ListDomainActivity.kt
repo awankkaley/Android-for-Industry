@@ -29,7 +29,7 @@ class ListDomainActivity : AppCompatActivity(), DomainNavigator {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_domain)
         val key = intent.getStringExtra("key")
-        setSupportActionBar(toolbar_list)
+
         supportActionBar?.title = resources.getString(R.string.result) + " " + key
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -85,7 +85,7 @@ class ListDomainActivity : AppCompatActivity(), DomainNavigator {
                     "country" to it?.country.toString(),
                     "createdate" to it?.createDate.toString(),
                     "expirydate" to it?.expiryDate.toString(),
-                    "mx" to it?.mX.toString(),
+                    "mx" to it?.mX,
                     "ns" to it?.nS.toString(),
                     "parser" to it?.parser.toString(),
                     "parsererror" to it?.parserError.toString(),

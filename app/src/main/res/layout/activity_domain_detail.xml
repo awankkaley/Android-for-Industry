@@ -7,11 +7,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".feature.detail.DomainDetailActivity">
-    <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar_detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"/>
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -207,12 +202,11 @@
                     android:text="@string/mx"
                     android:textStyle="bold"/>
 
-            <TextView
+            <android.support.v7.widget.RecyclerView
                     android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:text="MX"
-                    android:id="@+id/tv_mx_detail"/>
+                    android:id="@+id/lv_mx_detail"/>
             <View
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"

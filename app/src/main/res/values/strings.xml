@@ -9,7 +9,7 @@
     <string name="domain_desc_label">Domain Description</string>
 
     <string name="not_avail">Not Available</string>
-    <string name="result">Result </string>
+    <string name="result">Result</string>
     <string name="empty_field">Please Fill Your Input !</string>
     <string name="domain">Domain :</string>
     <string name="expiry_date">Expiry Date :</string>
@@ -30,4 +30,8 @@
     <string name="request_time_out">Something Wrong :(</string>
     <string name="domain_detail">Domain Detail</string>
     <string name="fill_your_domain_here">Fill Your Domain Here !</string>
+    <string name="exchange">Exchange :</string>
+    <string name="priority">Priority :</string>
+    <string name="domain_avail">Your Domain Available !</string>
+    <string name="domain_unavai">Your Domain Unavailable !</string>
 </resources>
