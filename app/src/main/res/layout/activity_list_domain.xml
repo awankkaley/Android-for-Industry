@@ -5,30 +5,50 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="10dp"
         tools:context=".feature.list.ListDomainActivity">
-        <ProgressBar
-                android:id="@+id/domain_progress_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:layout_gravity="center_horizontal"/>
-
-        <LinearLayout
+    <ProgressBar
+            android:id="@+id/domain_progress_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"/>
+    <LinearLayout
+            android:id="@+id/rto_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+        <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/timeout"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+        <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:text="@string/request_time_out"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <android.support.v4.widget.SwipeRefreshLayout
-                    android:id="@+id/domain_swipe_refresh_id"
+        <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/domain_swipe_refresh_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/domain_rv_id"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                <android.support.v7.widget.RecyclerView
-                        android:id="@+id/domain_rv_id"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"/>
-            </android.support.v4.widget.SwipeRefreshLayout>
-        </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
 </LinearLayout>

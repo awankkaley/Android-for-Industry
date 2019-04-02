@@ -5,74 +5,86 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        style="@style/AppTheme.NoActionBar"
         android:orientation="vertical"
-        tools:context=".feature.main.MainActivity">
+        tools:context=".feature.main.MainActivity"
+        android:background="@color/colorPrimary">
+
 
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="30dp"
             android:gravity="center"
             android:orientation="vertical">
 
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:text="@string/input_domain_label"/>
+
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginBottom="30dp"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="30dp"
-                    android:text="@string/input_domain_label"/>
-
-            <View android:layout_width="match_parent"
-                  android:layout_height="2dp"
-                  android:background="@color/colorPrimary"/>
-
-            <LinearLayout
+            <EditText
+                    android:background="@drawable/bg_edittext"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
-
-                <EditText
-                        android:layout_width="match_parent"
-                        android:hint=""
-                        android:id="@+id/eTxt_input_domain"
-                        android:layout_height="wrap_content"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                <Button
-                        android:layout_width="wrap_content"
-                        android:text="@string/cek_domain_label"
-                        android:id="@+id/btn_cek_domain"
-                        android:textSize="20dp"
-                        android:layout_height="wrap_content"/>
-                <Button
-                        android:layout_width="wrap_content"
-                        android:text="@string/cari_domain_label"
-                        android:id="@+id/btn_cari_domain"
-                        android:textSize="20dp"
-                        android:layout_height="wrap_content"/>
-
-            </LinearLayout>
+                    android:hint="@string/fill_your_domain_here"
+                    android:id="@+id/eTxt_input_domain"
+                    android:layout_height="50dp"
+                    android:padding="5dp"/>
 
         </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:text="@string/cek_domain_label"
+                    android:id="@+id/btn_cek_domain"
+                    android:textSize="20sp"
+                    style="@style/Base.TextAppearance.AppCompat.Button"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:text="@string/cari_domain_label"
+                    android:id="@+id/btn_cari_domain"
+                    android:textSize="20sp"
+                    style="@style/Base.TextAppearance.AppCompat.Button"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Ketersediaan"
+                android:layout_marginTop="40dp"
+                android:id="@+id/tv_main_available"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textStyle="bold"/>
+        <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/progress_bar_main"/>
 
     </LinearLayout>
 
 </LinearLayout>
+
