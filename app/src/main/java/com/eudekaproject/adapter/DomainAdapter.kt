@@ -26,7 +26,7 @@ class DomainAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItem(data[position])
-        holder.itemView.txt_domain_name.onClick { listener(data[position]) }
+        holder.itemView.onClick { listener(data[position]) }
     }
 
 
