@@ -1,6 +1,7 @@
 package com.eudekaproject.data
 
 
+import android.util.Log
 import com.eudekaproject.model.DomainResponse
 import retrofit2.Call
 import retrofit2.Callback
@@ -17,10 +18,11 @@ class DomainRemoteDataSource : DomainDataSource {
             override fun onResponse(call: Call<DomainResponse>, response: Response<DomainResponse>) {
                 if (response.isSuccessful) {
                     val data = response.body()
+                    Log.d("cek","data masuk " + response.message())
                     if (data != null) {
                         callback.onDomainLoaded(data)
                     }
-                }
+                }else callback.onDataNotAvailable(response.message())
             }
         })
     }

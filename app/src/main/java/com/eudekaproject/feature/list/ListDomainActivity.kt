@@ -85,7 +85,6 @@ class ListDomainActivity : AppCompatActivity(), DomainNavigator {
                     "country" to it?.country.toString(),
                     "createdate" to it?.createDate.toString(),
                     "expirydate" to it?.expiryDate.toString(),
-                    "mx" to it?.mX,
                     "ns" to it?.nS.toString(),
                     "parser" to it?.parser.toString(),
                     "parsererror" to it?.parserError.toString(),

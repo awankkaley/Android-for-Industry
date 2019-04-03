@@ -2,17 +2,12 @@ package com.eudekaproject.feature.detail
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
 import com.eudekaproject.R
-import com.eudekaproject.adapter.DomainAdapter
-import com.eudekaproject.adapter.MxAdapter
-import com.eudekaproject.model.MXItem
 import com.eudekaproject.utils.formatDate
 import com.eudekaproject.utils.formatList
 import kotlinx.android.synthetic.main.activity_domain_detail.*
 
 class DomainDetailActivity : AppCompatActivity() {
-    lateinit var adapter: MxAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,11 +15,6 @@ class DomainDetailActivity : AppCompatActivity() {
 
         supportActionBar?.title = resources.getString(R.string.domain_detail)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        val mx = intent.getParcelableArrayListExtra<MXItem>("mx")
-        adapter = MxAdapter(this, mx)
-        lv_mx_detail.layoutManager = LinearLayoutManager(this)
-        lv_mx_detail.adapter = adapter
 
         tv_a_detail.formatList(intent.getStringExtra("a"))
         tv_active_date_detail.text = intent.getStringExtra("isdead")

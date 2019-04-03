@@ -190,23 +190,7 @@
                     android:layout_height="wrap_content"
                     tools:text="Resolvable"
                     android:id="@+id/tv_resolvable_detail"/>
-            <View
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="?android:attr/listDivider"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mx"
-                    android:textStyle="bold"/>
 
-            <android.support.v7.widget.RecyclerView
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lv_mx_detail"/>
             <View
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"

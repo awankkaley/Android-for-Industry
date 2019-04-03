@@ -10,4 +10,5 @@ interface ApiInterface {
 
     @GET("/search")
     fun getAllDomain(@Query("query") search: String): Call<DomainResponse>
+
 }
