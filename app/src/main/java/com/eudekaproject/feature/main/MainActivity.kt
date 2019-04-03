@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity(), DomainNavigator {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        this.supportActionBar?.hide()
+
         initViewModel()
 
         btn_cari_domain.onClick {
@@ -33,14 +35,14 @@ class MainActivity : AppCompatActivity(), DomainNavigator {
     }
 
     override fun loadListDomain(listDomain: List<DomainsItem?>) {
-        if (listDomain.isEmpty()) {
-            tv_main_available.setText(R.string.domain_avail)
-        } else tv_main_available.setText(R.string.domain_unavai)
+        tv_main_available.setText(R.string.domain_unavai)
 
     }
 
     override fun errorLoadListDomain(message: String) {
-        toast(message)
+        if (message.isEmpty()) {
+            tv_main_available.setText(R.string.domain_avail)
+        } else toast(message)
     }
 
     override fun showProgress() {
